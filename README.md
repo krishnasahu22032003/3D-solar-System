@@ -1,6 +1,6 @@
 
 
-[![Orbitalux Demo](./public/images/screenshot.png)
+![Orbitalux Demo](./public/images/screenshot.png)
 
 # 🌌 Orbitalux
 
