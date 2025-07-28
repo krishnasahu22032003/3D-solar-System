@@ -99,44 +99,45 @@ export default function GalaxyScene() {
       </Canvas>
 
       {/* HeroText overlay */}
-      <div className="absolute left-10 top-[38%] -translate-y-1/2 w-[80%] max-w-lg text-left z-50">
-        <h1
-          ref={headline}
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#C7CED9] via-[#8FA3BB] to-[#3E4C59] text-transparent bg-clip-text drop-shadow-[0_2px_12px_rgba(148,163,184,0.5)]"
-        >
-          Enter the{" "}
-          <span className="bg-gradient-to-r from-[#A0B3C6] to-[#2C3A4C] text-transparent bg-clip-text">
-            Galaxy Portal
-          </span>
-        </h1>
-        <p
-          ref={subtext}
-          className="mt-5 text-sm sm:text-base text-slate-300 leading-relaxed max-w-md"
-        >
-          Dive into a celestial interface where space meets interaction. Navigate intelligent designs, witness responsive planets, and explore futuristic scroll-based visuals crafted for interstellar storytellers.
-        </p>
-        <button
-          ref={button}
-          className="group mt-7 px-6 py-3 rounded-full bg-gradient-to-r from-[#3E4C59] to-[#1F2933] text-white text-sm font-semibold shadow-xl relative overflow-hidden transition duration-300 ease-in-out hover:scale-110 hover:shadow-[0_0_52px_#AAB9CD] hover:brightness-125 hover:-rotate-1 hover:-translate-y-1"
-        >
-          <span className="relative z-10">🌌 Begin Exploration</span>
-          <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></span>
-        </button>
-      </div>
+   <div className="absolute left-4 min-[400px]:left-6 sm:left-8 md:left-10 top-[32%] sm:top-[35%] md:top-[38%] -translate-y-1/2 w-[92%] min-[400px]:w-[85%] sm:w-[80%] max-w-[90%] sm:max-w-lg text-left z-50 px-2">
+  <h1
+    ref={headline}
+    className="text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#C7CED9] via-[#8FA3BB] to-[#3E4C59] text-transparent bg-clip-text drop-shadow-[0_2px_12px_rgba(148,163,184,0.5)]"
+  >
+    Enter the{" "}
+    <span className="bg-gradient-to-r from-[#A0B3C6] to-[#2C3A4C] text-transparent bg-clip-text">
+      Galaxy Portal
+    </span>
+  </h1>
+  <p
+    ref={subtext}
+    className="mt-4 sm:mt-5 text-xs min-[400px]:text-sm sm:text-base text-slate-300 leading-relaxed max-w-full sm:max-w-md"
+  >
+    Dive into a celestial interface where space meets interaction. Navigate intelligent designs, witness responsive planets, and explore futuristic scroll-based visuals crafted for interstellar storytellers.
+  </p>
+  <button
+    ref={button}
+    className="group mt-5 sm:mt-7 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-[#3E4C59] to-[#1F2933] text-white text-sm font-semibold shadow-xl relative overflow-hidden transition duration-300 ease-in-out hover:scale-110 hover:shadow-[0_0_52px_#AAB9CD] hover:brightness-125 hover:-rotate-1 hover:-translate-y-1"
+  >
+    <span className="relative z-10">🌌 Begin Exploration</span>
+    <span className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm"></span>
+  </button>
+</div>
 
-      <div
-        ref={starCountLeft}
-        className="absolute bottom-6 left-6 text-[11px] text-slate-400 tracking-wide font-mono backdrop-blur-sm px-3 py-1 rounded-md border border-white/10 bg-white/5 shadow-md z-50"
-      >
-        ⭐ 2,438 explorers entered
-      </div>
+<div
+  ref={starCountLeft}
+  className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[10px] sm:text-[11px] text-slate-400 tracking-wide font-mono backdrop-blur-sm px-2.5 sm:px-3 py-1 rounded-md border border-white/10 bg-white/5 shadow-md z-50"
+>
+  ⭐ 2,438 explorers entered
+</div>
 
-      <div
-        ref={starCountRight}
-        className="absolute bottom-6 right-6 text-[11px] text-slate-400 tracking-wide font-mono backdrop-blur-sm px-3 py-1 rounded-md border border-white/10 bg-white/5 shadow-md z-50"
-      >
-        🛰️ Live Visitors: 158
-      </div>
+<div
+  ref={starCountRight}
+  className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 text-[10px] sm:text-[11px] text-slate-400 tracking-wide font-mono backdrop-blur-sm px-2.5 sm:px-3 py-1 rounded-md border border-white/10 bg-white/5 shadow-md z-50"
+>
+  🛰️ Live Visitors: 158
+</div>
+
     </>
   );
 }
