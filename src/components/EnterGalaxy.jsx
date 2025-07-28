@@ -2,7 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function EnterGalaxy() {
-  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.2 });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
 
   const planets = [
     {
@@ -39,12 +42,12 @@ export default function EnterGalaxy() {
   };
 
   return (
-    <section  className="w-full min-h-screen px-6 py-32 bg-black text-white relative overflow-hidden">
+    <section className="w-full min-h-screen px-6 py-32 bg-black text-white relative overflow-hidden">
       <div className="max-w-6xl mx-auto text-center">
         {/* Title */}
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#C7CED9] via-[#8FA3BB] to-[#3E4C59] text-transparent bg-clip-text drop-shadow-[0_2px_12px_rgba(148,163,184,0.5)] mb-6"
           ref={ref}
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-[#C7CED9] via-[#8FA3BB] to-[#3E4C59] text-transparent bg-clip-text drop-shadow-[0_2px_12px_rgba(148,163,184,0.5)] mb-6"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={fadeInUp}
@@ -68,7 +71,8 @@ export default function EnterGalaxy() {
           {planets.map((planet, i) => (
             <motion.div
               key={i}
-              className="relative rounded-3xl p-6 border border-[#2a2a3c] group overflow-hidden transition-transform duration-700 hover:scale-[1.03] shadow-[0_0_30px_rgba(255,255,255,0.05)] bg-[#111217]"
+              style={{ willChange: "transform, opacity" }}
+              className="relative rounded-3xl p-6 border border-[#2a2a3c] group overflow-hidden transition-transform duration-700 motion-safe:hover:scale-[1.03] shadow-[0_0_30px_rgba(255,255,255,0.05)] bg-[#111217]"
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={fadeInUp}
@@ -76,7 +80,7 @@ export default function EnterGalaxy() {
             >
               {/* Outer glow */}
               <div
-                className={`absolute -inset-[2px] rounded-[inherit] z-0 bg-gradient-to-br ${planet.glow} blur-xl opacity-20 group-hover:opacity-40 transition duration-700`}
+                className={`absolute -inset-[2px] rounded-[inherit] z-0 bg-gradient-to-br ${planet.glow} blur-md opacity-20 group-hover:opacity-30 transition duration-700 pointer-events-none`}
               />
 
               {/* Image */}
@@ -84,7 +88,7 @@ export default function EnterGalaxy() {
                 <img
                   src={planet.image}
                   alt={planet.name}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 motion-safe:group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/0 pointer-events-none group-hover:opacity-100 transition-opacity duration-500" />
               </div>
