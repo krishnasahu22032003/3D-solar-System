@@ -35,16 +35,16 @@ export default function Navbar() {
 
       {/* Right Side Elements */}
       <div className="flex items-center gap-6">
-        <span className="text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
+        <span className="md:block hidden text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
           Explore
         </span>
-        <span className="text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
+        <span className="md:block hidden text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
           Features
         </span>
-        <span className="text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
+        <span className="md:block hidden text-sm sm:text-base font-medium text-slate-200 hover:text-white hover:underline underline-offset-4 transition duration-300 cursor-pointer">
           Playground
         </span>
-        <button className="px-6 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#434C5E] to-[#2E3440] text-white hover:scale-110 hover:shadow-[0_0_20px_#88C0D0] transition-all duration-300">
+        <button className="md:block hidden px-6 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-[#434C5E] to-[#2E3440] text-white hover:scale-110 hover:shadow-[0_0_20px_#88C0D0] transition-all duration-300">
           🚀 Launch Portal
         </button>
       </div>
